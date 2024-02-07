@@ -1,0 +1,48 @@
+---
+title: "Homework #1"
+author: "Jack Tapay-Cueva"
+format: html
+editor: visual
+---
+
+**1. What is your home directory? What files/folders exist in your home directory? Navigate to it and then navigate back to your notes.**
+
+My home directory is a folder called "jackt." When entering "ls" on the terminal it listed homework assignments from previous courses that required me to use RStudio, as well as my Desktop, Documents and Downloads folder.
+
+**2. Where does the following command take you? How does it work?**
+
+    cd ~/../../..
+
+The command takes me down 3 levels up the initial home directory to the root directory. It works by changing directories from jackt, then moves up a level for every ".." instance.
+
+**3. Read the manual page of ls. What does the a flag do? What does the l flag do?**
+
+The ls command is used to list the contents of a directory. Flags can modify the way that ls works by specifying what is listed and how so. For example, the "-l" flag lists the contents with detailed information on each file, such its size, owner, permissions, etc.
+
+**4. Create a new file with touch command, for instance touch myfile.txt. Run stat myfile.txt what information do you get?**
+
+This is what my terminal returned after running "stat myfile.txt":
+
+16777230 36632654 -rw-r--r-- 1 jackt staff 0 0 "Feb 4 13:02:08 2024" "Feb 4 13:02:08 2024" "Feb 4 13:02:08 2024" "Feb 4 13:02:08 2024" 4096 0 0 myfile.txt
+
+**5. Run ls and from there list select a file. Now run 'ls -l' to display the details of the files, showing that it has been created or updated. What information does it give you regarding the myfile.txt and your selected file?**
+
+Here is the information on "myfile.txt":
+
+-rw-r--r-- 1 jackt staff 0 Feb 4 13:02 myfile.txt
+
+Here is the information on "boxplot.png":
+
+-rw-r--r-- 1 jackt staff 42124 Mar 7 2023 boxplot.png
+
+**6. Add the following line This line is my first line to myfile.txt. Then run cat myfile.txt to show the line is added.**
+
+Running "cat myfile.txt" returned the following:
+
+This line is my first line
+
+**7. Run touch myfile.txt then run ls -l myfile.txt does the "timestep" for the file myfile.txt is updated? Show the output. Note: Another common use of the touch command is to update the timestamps of an existing file.**
+
+Running "ls -l myfile.txt" after running "touch myfile.txt" returned the following:
+
+-rw-r--r-- 1 jackt staff 27 Feb 4 13:09 myfile.txt
